@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header-container">
+    <h3>IntentLock</h3>
+    <!-- Master Toggle Switch -->
+    <label class="switch" title="Turn Extension On/Off">
+      <input type="checkbox" id="masterToggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Pomodoro Section -->
+  <div class="pomodoro-panel">
+    <div class="pomo-row">
+      <div class="pomo-col">
+        <label for="focusTime">Focus (min)</label>
+        <input type="number" id="focusTime" min="1" value="25">
+      </div>
+      <div class="pomo-col">
+        <label for="breakTime">Break (min)</label>
+        <input type="number" id="breakTime" min="1" value="5">
+      </div>
+    </div>
+    <div id="timerDisplay" class="timer-display">--:--</div>
+    <div id="timerStatus" class="timer-status">Idle</div>
+    <div class="pomo-row buttons-row">
+      <button id="btnFocus" class="pomo-btn focus-btn">Focus</button>
+      <button id="btnBreak" class="pomo-btn break-btn">Break</button>
+      <button id="btnStop" class="pomo-btn stop-btn">Stop</button>
+    </div>
+  </div>
+
+  <!-- Reminder Section -->
+  <label for="minutes">Reminder Interval (Minutes)</label>
+  <input type="number" id="minutes" min="1" value="5">
+
+  <label for="message">Identity Reminder</label>
+  <textarea id="message" rows="1" placeholder="The Pain of Boredom is also Pain. And Every Pain you endure today will help you tomorrow in one way or another."></textarea>
+
+  <label for="whitelist">Whitelisted Targets</label>
+  <textarea id="whitelist" rows="1" placeholder="URLs or keywords (comma separated)"></textarea>
+
+  <button id="saveBtn">SAVE CONFIGURATION</button>
+  <div id="status" class="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
