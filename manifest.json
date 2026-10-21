@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "IntentLock",
   "version": "2.1",
-  "description": "Reminds me who I am and my goals, bypassing study sites with a built-in Pomodoro timer.",
+  "description": "Reminds me of my goals, bypassing study sites with a built-in Pomodoro timer.",
   "permissions": ["storage", "activeTab", "notifications", "alarms", "offscreen"],
   "host_permissions": ["<all_urls>"],
   "background": {
